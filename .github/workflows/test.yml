@@ -1,0 +1,14 @@
+on: [push]
+
+jobs:
+  DeployTest:
+    runs-on: ubuntu-latest
+    name: TestJob
+    steps:
+      - uses: actions/checkout@v2 # 第一步，下载代码仓库
+      
+      - name: TestStep
+        id: Test
+        uses: STDSuperman/action-template@master
+        with:
+          host: 'aa.bb.cc.dd'
